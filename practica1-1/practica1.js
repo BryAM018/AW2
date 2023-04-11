@@ -24,24 +24,48 @@ const parqueos = [
   { id: 4, vehiculoId: vehiculos[3].id,  espacioDeParqueoId: 4, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
   { id: 5, vehiculoId: vehiculos[4].id,  espacioDeParqueoId: 5, fechaHoraEntrada: new Date(), fechaHoraSalida: null }
 ]
-
 //FoeEach
-// Recorrer el arreglo de vehículos y mostrar los elementos
-console.log("Vehículos:");
-vehiculos.forEach(vehiculo => {
-  console.log(`ID: ${vehiculo.id}, Descripción: ${vehiculo.descripcion}, Placa: ${vehiculo.placa}, Color: ${vehiculo.color}`);
-});
+// Función para mostrar los vehículos
+function mostrarVehiculos(vehiculos) {
+  let cont = [];
+  vehiculos.forEach(vehiculo => {
+    cont.push(`Vehículos:ID: ${vehiculo.id}, Descripción: ${vehiculo.descripcion}, Placa: ${vehiculo.placa}, Color: ${vehiculo.color}`);
+  }
+  );
+  return cont 
+}
 //For
-// Mostrar los espacios de parqueo
-console.log("Espacios de parqueo:");
-for (let i = 0; i < espaciosDeParqueo.length; i++) {
-  console.log(`ID: ${espaciosDeParqueo[i].id}, Descripción: ${espaciosDeParqueo[i].descripcion}`);
+// Función para mostrar los espacios de parqueo
+function mostrarEspaciosDeParqueo(espaciosDeParqueo) {
+  let cont = [];
+  for (let i = 0; i < espaciosDeParqueo.length; i++) {
+    cont.push(`Espacios de parqueo:ID: ${espaciosDeParqueo[i].id}, Descripción: ${espaciosDeParqueo[i].descripcion}`);
+  }
+  return cont 
 }
 //While
-// Mostrar los parqueos
-console.log("Parqueos:");
-i = 0;
-while (i < parqueos.length) {
-  console.log(`ID: ${parqueos[i].id}, ID Vehículo: ${parqueos[i].vehiculoId}, ID Espacio de Parqueo: ${parqueos[i].espacioDeParqueoId}, Fecha y hora de entrada: ${parqueos[i].fechaHoraEntrada}, Fecha y hora de salida: ${parqueos[i].fechaHoraSalida}`);
-  i++;
+// Función para mostrar los parqueos
+function mostrarParqueos(parqueos) {
+  i = 0;
+  let cont = [];
+  while (i < parqueos.length) { 
+   cont.push(`Parqueos:ID: ${parqueos[i].id}, ID Vehículo: ${parqueos[i].vehiculoId}, ID Espacio de Parqueo: ${parqueos[i].espacioDeParqueoId}, Fecha y hora de entrada: ${parqueos[i].fechaHoraEntrada}, Fecha y hora de salida: ${parqueos[i].fechaHoraSalida}`) ;
+    i++;
+  }
+  return cont 
+}
+/*
+const muestra1= mostrarParqueos(parqueos)
+console.log(muestra1)
+
+const muestra2= mostrarEspaciosDeParqueo(espaciosDeParqueo)
+console.log(muestra2)
+
+const muestra3= mostrarVehiculos(vehiculos)
+console.log(muestra3)
+*/
+module.exports = {
+  mostrarVehiculos:vehiculos,
+  mostrarEspaciosDeParqueo:espaciosDeParqueo,
+  mostrarParqueos:parqueos
 }
