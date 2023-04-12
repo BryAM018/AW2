@@ -1,8 +1,9 @@
-const { mostrarVehiculos , mostrarEspaciosDeParqueo, mostrarParqueos }  = require('./practica1');
+//const { mostrarVehiculos , mostrarEspaciosDeParqueo, mostrarParqueos }  = require('./practica1');
+//Vinculo con el otro archivo
 const functions= require('./practica1')
 
-
-let muestra1= functions.mostrarParqueos
+//Mostrar por consola
+const muestra1= functions.mostrarParqueos
 console.log(muestra1)
 
 const muestra2= functions.espaciosDeParqueo
