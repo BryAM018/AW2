@@ -18,11 +18,11 @@ const espaciosDeParqueo = [
 
 // Arreglo de Parqueos
 const parqueos = [
-  { id: 1, vehiculoId: vehiculos[0].id,  espacioDeParqueoId: 1, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
-  { id: 2, vehiculoId: vehiculos[1].id,  espacioDeParqueoId: 2, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
-  { id: 3, vehiculoId: vehiculos[2].id,  espacioDeParqueoId: 3, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
-  { id: 4, vehiculoId: vehiculos[3].id,  espacioDeParqueoId: 4, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
-  { id: 5, vehiculoId: vehiculos[4].id,  espacioDeParqueoId: 5, fechaHoraEntrada: new Date(), fechaHoraSalida: null }
+  { id: 1, vehiculoId: 2,  espacioDeParqueoId: 1, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
+  { id: 2, vehiculoId: 1,  espacioDeParqueoId: 2, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
+  { id: 3, vehiculoId: 3,  espacioDeParqueoId: 3, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
+  { id: 4, vehiculoId: 4,  espacioDeParqueoId: 4, fechaHoraEntrada: new Date(), fechaHoraSalida: null },
+  { id: 5, vehiculoId: 5,  espacioDeParqueoId: 5, fechaHoraEntrada: new Date(), fechaHoraSalida: null }
 ]
 //FoeEach
 // Función para mostrar los vehículos
@@ -54,7 +54,7 @@ function mostrarParqueos(parqueos) {
   }
   return cont 
 }
-/*
+
 const muestra1= mostrarParqueos(parqueos)
 console.log(muestra1)
 
@@ -63,7 +63,7 @@ console.log(muestra2)
 
 const muestra3= mostrarVehiculos(vehiculos)
 console.log(muestra3)
-*/
+
 module.exports = {
   mostrarVehiculos:vehiculos,
   mostrarEspaciosDeParqueo:espaciosDeParqueo,
