@@ -1,42 +1,41 @@
 
-function findBookForId(id){
+const {vehiculos,parqueos}  = require('./datos');
+
+function findParqueoForId(id){
     return new Promise((resolve, reject)=>{
-        const book = books.find((book)=> book.id===id );
-        if (!book)
+        const parqueo = parqueos.find((parqueo)=> parqueo.id===id );
+        if (!parqueo)
         {
             const error= new Error();
-            error.message="El libro no fue encontrado";
+            error.message="El Parqueadero no fue encontrado";
             reject(error);
         }
-        resolve(book);
-
+        resolve(parqueo);
     })
+} 
 
-}
-/* 
-function findAuthorForId(id){
+function findVehiculoForId(id){
     return new Promise((resolve, reject)=>{
-        const author =  authors.find((author)=>{
-            return author.id===id;
+        const vehiculo =  vehiculos.find((vehiculo)=>{
+            return vehiculos.id===id;
         });
-        if (!author)
+        if (!vehiculo)
         {
             const error =  new Error();
-            error.message="No pudimos encontrar el autor";
+            error.message="No pudimos encontrar el vehiculo";
             reject(error);
         }
-        //libro.author = author;
-        resolve(author);
+        resolve(vehiculo);
     })
 }
-findBookForId(2)
-.then((book)=>{ 
-    console.log(book);
-    return findAuthorForId(book.idauthor);
+findParqueoForId(2)
+.then((parqueo)=>{ 
+    console.log(parqueo);
+    return findVehiculoForId(parqueo.idvehiculo);
 })
-.then((author)=>{
-    console.log(author)
+.then((vehiculo)=>{
+    console.log(vehiculo)
 })
 .catch((error)=>{
     console.log(error.message)
-}) */
+}) 
