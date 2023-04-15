@@ -18,11 +18,11 @@ const vehiculos = [
 
   //3.Con una función busque y muestre uno de todos los elementos del arreglo de objetos transaccional 
   //y los datos de su entidad relacionada.
-  /* const transaccion = parqueos.find((p) => p.id === 3);
+  const transaccion = parqueos.find((p) => p.id === 3);
   const vehiculo = vehiculos.find((v) => v.id === transaccion.vehiculoId);
   console.log(transaccion);
   console.log(vehiculo);
- */
+
 
   
   module.exports = {
