@@ -25,3 +25,7 @@ const vehiculos = [
 
 
   
+  module.exports = {
+    mostrarVehiculos:vehiculos,
+    mostrarParqueos:parqueos
+  }

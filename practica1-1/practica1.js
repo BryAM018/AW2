@@ -55,14 +55,14 @@ function mostrarParqueos(parqueos) {
   return cont 
 }
 
-const muestra1= mostrarParqueos(parqueos)
+/* const muestra1= mostrarParqueos(parqueos)
 console.log(muestra1)
 
 const muestra2= mostrarEspaciosDeParqueo(espaciosDeParqueo)
 console.log(muestra2)
 
 const muestra3= mostrarVehiculos(vehiculos)
-console.log(muestra3)
+console.log(muestra3) */
 
 module.exports = {
   mostrarVehiculos:vehiculos,
