@@ -1,0 +1,17 @@
+{
+  "name": "practica3-1",
+  "version": "1.0.0",
+  "description": "taller3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "database"
+  ],
+  "author": "BryAM",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.1.0"
+  }
+}
