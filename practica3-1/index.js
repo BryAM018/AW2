@@ -28,15 +28,25 @@ const connectionURL= "mongodb+srv://bryam018:RbVP1A4RBo42WXhQ@cluster0.0ggvdtd.m
             });
         const saveParqueo= await parqueo1.save();
     //Listar por consola los datos registrados en las 3 colecciones 
-    const result =  await Parqueo.find().populate("vehiculoId").populate("espacioDeParqueoId") ;
+    const result1 =  await Parqueo.find().populate("vehiculoId").populate("espacioDeParqueoId") ;
+    const result2 =  await EspaciosDeParqueo.find();
+    const result3 =  await Vehiculo.find();
+    
     // console.log(result[0].permissions)
     
     for (let i =0; i<result.length-1; i++)
     {
-        console.log(result[i]);
+        console.log(result1[i]);
     }
 
+    while (i < result2.length) { 
+        console.log(result2[i]);
+                 i++;
+       }
 
+       result3.forEach(vehiculo => {
+        console.log(result3[i]);      }
+      );
     } catch (error) {
         console.log(error);
     }
