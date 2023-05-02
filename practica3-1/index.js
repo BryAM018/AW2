@@ -11,8 +11,8 @@ const connectionURL= "mongodb+srv://bryam018:RbVP1A4RBo42WXhQ@cluster0.0ggvdtd.m
         const EspaciosDeParqueo = mongoose.model("espacio",{ descripcion: 'String' });
     //relaciones foráneas existentes
         const Parqueo = mongoose.model("parqueo",{ 
-            vehiculoId: { type: mongoose.Types.ObjectId, ref:"Vehiculos" },
-            espacioDeParqueoId: { type: mongoose.Types.ObjectId, ref:"EspaciosDeParqueo" },
+            vehiculoId: { type: mongoose.Types.ObjectId, ref:"vehiculos" },
+            espacioDeParqueoId: { type: mongoose.Types.ObjectId, ref:"espacio" },
             fechaHoraEntrada: 'Date', fechaHoraSalida: 'null' });
         //Crear el CRUD de las entidades maestras para constatar la conexión.
         const vehiculo1 =  new Vehiculo({ descripcion: 'Toyota Corolla', placa: 'ABC123', color: 'Rojo' });
@@ -33,20 +33,21 @@ const connectionURL= "mongodb+srv://bryam018:RbVP1A4RBo42WXhQ@cluster0.0ggvdtd.m
     const result3 =  await Vehiculo.find();
     
     // console.log(result[0].permissions)
-    
-    for (let i =0; i<result.length-1; i++)
-    {
+        
+    for (let i = 0; i < result1.length; i++) {
         console.log(result1[i]);
-    }
+      }
 
-    while (i < result2.length) { 
+      let i = 0;
+      while (i < result2.length) { 
         console.log(result2[i]);
-                 i++;
-       }
+        i++;
+      }
 
-       result3.forEach(vehiculo => {
-        console.log(result3[i]);      }
-      );
+      result3.forEach(vehiculo => {
+        console.log(vehiculo);
+      });
+      
     } catch (error) {
         console.log(error);
     }
