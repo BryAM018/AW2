@@ -50,5 +50,5 @@ const connectionURL= "mongodb+srv://bryam018:RbVP1A4RBo42WXhQ@cluster0.0ggvdtd.m
       
     } catch (error) {
         console.log(error);
-    }
+    }   
 })()
